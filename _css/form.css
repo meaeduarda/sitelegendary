@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+section#corpo-full{
+    text-align: center;
+}
+
+.contatos{
+    text-align: center;
+    font-size: 12pt;
+}

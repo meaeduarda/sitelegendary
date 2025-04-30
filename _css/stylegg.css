@@ -285,3 +285,55 @@ div#interface {
   }
 
 }
+
+/*tornando responsivo*/
+
+@media screen and (max-width: 768px) {
+  body {
+      font-size: 14px;
+  }
+  
+  div#interface {
+    max-width: 90%;
+}
+
+  div#interface {
+      width: 100%;
+      margin: 0 auto;
+      padding: 10px;
+  }
+
+  header#cabecalho {
+      width: 100%;
+      height: auto;
+      text-align: center;
+  }
+
+  nav#menu ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+  }
+
+  nav#menu li {
+      line-height: normal;
+      margin: 10px 0;
+  }
+
+  aside#lateral, section#corpo {
+      width: 100%;
+      float: none;
+      padding: 10px;
+  }
+
+  img {
+      max-width: 100%;
+      height: auto;
+  }
+
+  video#filme {
+      width: 100%;
+      height: auto;
+  }
+}

@@ -8,3 +8,39 @@ section#corpo-full{
     text-align: center;
     font-size: 12pt;
 }
+
+.form-contato {
+    background-color: #0c0c0c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(119, 119, 119, 0.2);
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+label{
+   color: #ffffff; 
+}
+.form-contato input,
+.form-contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-contato button {
+    background-color: #E4B124;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-contato button:hover {
+    background-color: #c9a700;
+}

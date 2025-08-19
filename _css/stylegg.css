@@ -11,7 +11,7 @@ body {
   background-image: linear-gradient(-45deg, rgb(214, 185, 18), #c9b506, #E4B124);
   background-size: 400% 400%;
   animation: animate 5s infinite alternate;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
@@ -30,27 +30,24 @@ a {
 /* Cabeçalho */
 
 header#cabecalho img#icone {
-  margin-left: 90px;
-  width: 220px;
-  height: 150px;
-  top: 30px;
+  width: 180px;
+  height: auto;
   border-radius: 100px;
-  padding: 4px;
-  
+
 
 }
 
 header#cabecalho {
-  border-bottom: 1px #2c2b2b solid;
-  height: 156px;
-  background-color: #000000;
-  width: 1110px;
-  padding: 2px 5px;
+  display: flex;
   align-items: center;
-  margin-left: -10px;
-  
-  
+  justify-content: space-between; /* distribui logo e menu nas extremidades */
+  background-color: #000000;
+  padding: 10px 20px;
+  height: 150px;
+  width: 100%;
+  box-sizing: border-box;
 }
+
 
 header#cabecalho h1 {
   font-family: 'FonteLogo', sans-serif;
@@ -117,28 +114,35 @@ figure.foto-legenda:hover figcaption {
 
 /* Formatação do Menu*/
 nav#menu {
-  display: block;
-  
-
+  display: flex;
+  text-transform: uppercase;
+  position: relative;
+  top: 0;       /* ou remova esse top */
+  left: 0;      /* remove o left: 540px */
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  text-align: center;
 }
 
+
 nav#menu ul {
+  display: flex; 
   list-style: none;
-  text-transform: uppercase;
-  position: absolute;
-  top: -13px;
-  left: 540px;
+  padding: 0;
+  margin: 0;
+  gap: 30px;
+}
+
+nav#menu ul.show {
+  display: flex;
 }
 
 nav#menu li {
+  display: inline;
+  font-weight: bold;
   font-size: 16pt;
-  display: inline-block;
-  color: #E4B124;
-  line-height: 140px;
-  margin-left: 20px;
-  -webkit-transition: background-color 1s;
-  -o-transition: background-color 1s;
-  transition: background-color 1s;
+  color: aliceblue;
 
 }
 
@@ -147,15 +151,29 @@ nav#menu h1 {
 }
 
 nav#menu a {
-  color: #E4B124;
+  color: aliceblue;
   text-decoration: none;
 
 }
 
 nav#menu a:hover {
-  color: aliceblue;
+  color: #E4B124;
   text-decoration: underline;
 }
+
+#btn-menu {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  color: #E4B124;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
 
 section#corpo {
   display: block;
@@ -247,7 +265,8 @@ aside#lateral h2 {
   padding: 5px;
 
 }
-video#filme{
+
+video#filme {
   width: 420px;
   height: 300px;
   background-color: #000000;
@@ -271,16 +290,17 @@ div#interface {
   padding: 10px 10px 10px 10px;
 }
 
-@keyframes animate{
-  
-  0%{
+@keyframes animate {
+
+  0% {
     background-position: 0% 50%;
   }
 
   50% {
     background-position: 100% 50%;
   }
-  100%{
+
+  100% {
     background-position: 0% 50%;
   }
 
@@ -290,50 +310,109 @@ div#interface {
 
 @media screen and (max-width: 768px) {
   body {
-      font-size: 14px;
+    font-size: 14px;
   }
-  
-  div#interface {
-    max-width: 90%;
-}
 
   div#interface {
-      width: 100%;
-      margin: 0 auto;
-      padding: 10px;
+    max-width: 90%;
+  }
+
+  div#interface {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
   }
 
   header#cabecalho {
-      width: 100%;
-      height: auto;
-      text-align: center;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  #menu-itens.hidden {
+    display: none;
+  }
+
+  #menu-overlay.hidden {
+    display: none;
   }
 
   nav#menu ul {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
   }
 
   nav#menu li {
-      line-height: normal;
-      margin: 10px 0;
+    line-height: normal;
+    margin: 10px 0;
   }
 
-  aside#lateral, section#corpo {
-      width: 100%;
-      float: none;
-      padding: 10px;
+  aside#lateral,
+  section#corpo {
+    width: 100%;
+    float: none;
+    padding: 10px;
   }
 
   img {
-      max-width: 100%;
-      height: auto;
+    max-width: 100%;
+    height: auto;
   }
 
   video#filme {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
   }
+
+  @media screen and (max-width: 768px) {
+    #btn-menu {
+      display: block;
+    }
+
+    nav#menu ul {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 250px;
+      background-color: #000;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-top: 60px;
+      padding-left: 20px;
+      transition: transform 0.3s ease;
+      transform: translateX(100%);
+      z-index: 999;
+  }
+
+    nav#menu ul.show {
+    transform: translateX(0);
+    display: flex;
+  }
+
+   #menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+  }
+
+  nav#menu li {
+    display: block;
+    margin: 10px 0;
+    line-height: normal;
+  }
+
+  nav#menu {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
 }

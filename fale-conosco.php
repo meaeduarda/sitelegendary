@@ -15,9 +15,9 @@
             <nav id="menu">
                 <h1>Fale Conosco</h1>
                 <ul type="disc">
-                    <li><a href="../sitelegendary/Sitelegendary.html">Home</a></li>
+                    <li><a href="../sitelegendary/index.html">Home</a></li>
                     <li><a href="../sitelegendary/fotos.html">Fotos</a></li>
-                    <li><a href="../sitelegendary/fale-conosco.html">Fale conosco</a></li>
+                    <li><a href="../sitelegendary/fale-conosco.php">Fale conosco</a></li>
                 </ul>
             </nav>
         </header>

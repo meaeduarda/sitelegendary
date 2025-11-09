@@ -66,6 +66,21 @@
                 <a href="https://www.instagram.com/legendary_acessorios/?next=%2F" target="_blank">Instagram</a>
         </footer>
     </div>
+    <script>
+        const btnMenu = document.getElementById('btn-menu');
+        const menuItens = document.getElementById('menu-itens');
+        const overlay = document.getElementById('menu-overlay');
+
+        btnMenu.addEventListener('click', () => {
+            menuItens.classList.toggle('show');
+            overlay.classList.toggle('hidden');
+        });
+
+        overlay.addEventListener('click', () => {
+            menuItens.classList.remove('show');
+            overlay.classList.add('hidden');
+        });
+    </script>
 </body>
 
 </html>

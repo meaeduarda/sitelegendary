@@ -48,42 +48,42 @@ ul#album-fotos li {
 
 /*Carregando as fotos para a galeria*/
 ul#album-fotos li#foto01 {
-    background:url('../_imagens/galeria1.jpg') no-repeat;
+    background:url('imagens/galeria1.jpg') no-repeat;
     background-position: 30% 30%;
     background-size: 400px 400px;
     background-color: #ffffff;
 }
 
 ul#album-fotos li#foto02 {
-    background:url('../_imagens/galeria2.jpg') no-repeat;
+    background:url('imagens/galeria2.jpg') no-repeat;
     background-position: 50% 50%;
     background-size: 400px 400px;
     background-color: #ffffff;
 }
 
 ul#album-fotos li#foto03 {
-    background:url('../_imagens/galeria3.jpg') no-repeat;
+    background:url('imagens/galeria3.jpg') no-repeat;
     background-position: 50% 50%;
     background-size: 400px 400px;
     background-color: #ffffff;
 }
 
 ul#album-fotos li#foto04 {
-    background:url('../_imagens/galeria4.jpg') no-repeat;
+    background:url('imagens/galeria4.jpg') no-repeat;
     background-position: 50% 50%;
     background-size: 400px 400px;
     background-color: #ffffff;
 }
 
 ul#album-fotos li#foto05 {
-    background:url('../_imagens/galeria5.jpg') no-repeat;
+    background:url('imagens/galeria5.jpg') no-repeat;
     background-position: 50% 50%;
     background-size: 400px 400px;
     background-color: #ffffff;
 }
 
 ul#album-fotos li#foto06 {
-    background:url('../_imagens/galeria\ 6.png') no-repeat;
+    background:url('imagens/galeria 6.png') no-repeat;
     background-position: 15% 15%;
     background-size: 400px 400px;
     background-color: #ffffff;

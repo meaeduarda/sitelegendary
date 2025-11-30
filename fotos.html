@@ -4,25 +4,19 @@
 <head>
     <meta charset="UTF-8" />
     <title>Galeria de fotos Legendary</title>
-    <link rel="stylesheet" href="css/stylegg.css">
-    <link rel="stylesheet" href="css/fotos.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="_css/stylegg.css">
+    <link rel="stylesheet" href="_css/fotos.css" />
 </head>
 
 <body>
     <div id="interface">
 
         <header id="cabecalho">
-            <img id="icone" src="imagens/logo.png" />
+            <img id="icone" src="_imagens/logo.png" />
             <nav id="menu">
                 <h1>Menu Principal</h1>
                 <button id="btn-menu" aria-label="Abrir menu">&#9776;</button>
-                
-                
-                <div id="menu-overlay" class="hidden"></div>
-            
-                
-                <ul id="menu-itens" class="hidden">
+                <ul id="menu-itens">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="fotos.html">Fotos</a></li>
                     <li><a href="fale-conosco.html">Fale conosco</a></li>
@@ -63,18 +57,23 @@
 
     </div>
     <script>
-        const btnMenu = document.getElementById('btn-menu');
-        const menuItens = document.getElementById('menu-itens');
-        const overlay = document.getElementById('menu-overlay');
+        // Adicione este código no seu HTML
+        document.addEventListener('DOMContentLoaded', function () {
+            const btnMenu = document.getElementById('btn-menu');
+            const menuItens = document.getElementById('menu-itens');
+            const menuOverlay = document.getElementById('menu-overlay');
 
-        btnMenu.addEventListener('click', () => {
-            menuItens.classList.toggle('show');
-            overlay.classList.toggle('hidden');
-        });
+            if (btnMenu && menuItens && menuOverlay) {
+                btnMenu.addEventListener('click', function () {
+                    menuItens.classList.toggle('show');
+                    menuOverlay.classList.toggle('show');
+                });
 
-        overlay.addEventListener('click', () => {
-            menuItens.classList.remove('show');
-            overlay.classList.add('hidden');
+                menuOverlay.addEventListener('click', function () {
+                    menuItens.classList.remove('show');
+                    menuOverlay.classList.remove('show');
+                });
+            }
         });
     </script>
 </body>

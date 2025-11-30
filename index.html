@@ -60,7 +60,7 @@
 
                 <h2>Alguns dos Nossos Produtos</h2>
                 <table id="tabelaespec">
-                    <caption>Nossas Miçangas <span>17/11/2022</span></caption>
+                    <caption>Nossas Miçangas</caption>
 
                     <tr>
                         <td class="ce">Straphones</td>
@@ -108,8 +108,7 @@
 
             <h2>Novidades na Legendary</h2>
             <p> <strong>Seu estilo combina com sua série favorita?</strong> Peça já sua miçanga temática.</p>
-            <p>Além do produto personalizado, receba uma foto da sua série favorita com o QRcode da música que mais
-                tocada nos episódios.</p>
+            <p>Além do produto personalizado, receba uma foto da sua série favorita com o QRcode da música mais tocada nos episódios.</p>
             <p><strong>SE LIGA!! Você também pode presentear amiges, namorades e familiares. Selecione a foto que
                     combina com seu presente.</strong></p>
         </aside>
@@ -126,18 +125,23 @@
 
     </div>
     <script>
-        const btnMenu = document.getElementById('btn-menu');
-        const menuItens = document.getElementById('menu-itens');
-        const overlay = document.getElementById('menu-overlay');
+        // Adicione este código no seu HTML
+        document.addEventListener('DOMContentLoaded', function () {
+            const btnMenu = document.getElementById('btn-menu');
+            const menuItens = document.getElementById('menu-itens');
+            const menuOverlay = document.getElementById('menu-overlay');
 
-        btnMenu.addEventListener('click', () => {
-            menuItens.classList.toggle('show');
-            overlay.classList.toggle('hidden');
-        });
+            if (btnMenu && menuItens && menuOverlay) {
+                btnMenu.addEventListener('click', function () {
+                    menuItens.classList.toggle('show');
+                    menuOverlay.classList.toggle('show');
+                });
 
-        overlay.addEventListener('click', () => {
-            menuItens.classList.remove('show');
-            overlay.classList.add('hidden');
+                menuOverlay.addEventListener('click', function () {
+                    menuItens.classList.remove('show');
+                    menuOverlay.classList.remove('show');
+                });
+            }
         });
     </script>
 

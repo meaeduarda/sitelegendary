@@ -6,7 +6,7 @@
   src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
 }
 
-/*degrade fundo kayframe final do css*/
+
 body {
   background: #E4B124;
   background-size: 400% 400%;
@@ -42,7 +42,7 @@ header#cabecalho {
   height: 150px;
   width: 100%;
   box-sizing: border-box;
-  position: relative; /* Adicionado para posicionamento do botão menu */
+  position: relative;
 }
 
 header#cabecalho h1 {
@@ -99,7 +99,7 @@ figure.foto-legenda:hover figcaption {
   opacity: 1;
 }
 
-/* Formatação do Menu*/
+/* Menu*/
 nav#menu {
   display: flex;
   text-transform: uppercase;
@@ -282,11 +282,11 @@ div#interface {
   }
 
   header#cabecalho {
-    flex-direction: row; /* Mantém o layout em linha */
+    flex-direction: row; 
     height: auto;
     padding: 10px 20px;
     text-align: center;
-    position: relative; /* Para posicionar o botão menu */
+    position: relative; 
   }
 
   header#cabecalho img#icone {
@@ -294,7 +294,6 @@ div#interface {
     margin-bottom: 0;
   }
 
-  /* CORREÇÃO DO BOTÃO MENU - Agora no canto superior direito */
   #btn-menu {
     display: block;
     position: absolute;
@@ -303,7 +302,7 @@ div#interface {
     z-index: 1000;
   }
 
-  /* CORREÇÃO DO MENU LATERAL */
+  
   nav#menu ul {
     position: fixed;
     top: 0;
@@ -334,7 +333,7 @@ div#interface {
     font-size: 14pt;
   }
 
-  /* CORREÇÃO DO OVERLAY - agora só aparece quando o menu está aberto */
+ 
   #menu-overlay {
     position: fixed;
     top: 0;
@@ -343,11 +342,11 @@ div#interface {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 998;
-    display: none; /* Inicialmente escondido */
+    display: none;
   }
 
   #menu-overlay.show {
-    display: block; /* Mostra apenas quando menu está aberto */
+    display: block; 
   }
 
   section#corpo,

@@ -5,8 +5,8 @@ div#tv-radio {
    height: 580px;
    margin: auto;
    background: url("C:/Users/annab/OneDrive/Área de Trabalho/TI DUDA/CURSO HTML/projeto-glass-html5/_imagens/radio-tv.png") no-repeat;
-
 }
+
 audio#musica {
     display: block;
     background-color: rgb(20, 20, 20);
@@ -14,8 +14,8 @@ audio#musica {
     left: 567px;
     top: 490px;
     width: 312px;
-    
 }
+
 video#filme {
     display: block;
     position: relative;
@@ -23,10 +23,56 @@ video#filme {
     top: 70px;
     width: 440px;
 }
+
 iframe#youtube {
     display: block;
     position: relative;
     left: 192px;
     top: -500px;
     width: 440px;
+}
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 768px) {
+  div#tv-radio {
+    width: 100%;
+    height: auto;
+    background: none;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  audio#musica {
+    position: static;
+    width: 100%;
+    max-width: 312px;
+    margin: 20px auto;
+    display: block;
+  }
+
+  video#filme {
+    position: static;
+    width: 100%;
+    max-width: 440px;
+    margin: 20px auto;
+    display: block;
+  }
+
+  iframe#youtube {
+    position: static;
+    width: 100%;
+    max-width: 440px;
+    height: 250px;
+    margin: 20px auto;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  audio#musica,
+  video#filme,
+  iframe#youtube {
+    max-width: 100%;
+  }
 }

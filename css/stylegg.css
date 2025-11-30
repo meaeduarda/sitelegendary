@@ -8,18 +8,17 @@
 
 /*degrade fundo kayframe final do css*/
 body {
-  background-image: linear-gradient(-45deg, rgb(214, 185, 18), #c9b506, #E4B124);
+  background: #E4B124;
   background-size: 400% 400%;
   animation: animate 5s infinite alternate;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+  padding: 0;
 }
-
 
 p {
   text-align: justify;
   text-indent: 50px;
-
-
 }
 
 a {
@@ -28,26 +27,23 @@ a {
 }
 
 /* Cabeçalho */
-
 header#cabecalho img#icone {
   width: 180px;
   height: auto;
   border-radius: 100px;
-
-
 }
 
 header#cabecalho {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* distribui logo e menu nas extremidades */
+  justify-content: space-between;
   background-color: #000000;
   padding: 10px 20px;
   height: 150px;
   width: 100%;
   box-sizing: border-box;
+  position: relative; /* Adicionado para posicionamento do botão menu */
 }
-
 
 header#cabecalho h1 {
   font-family: 'FonteLogo', sans-serif;
@@ -58,9 +54,7 @@ header#cabecalho h1 {
   margin-top: 10px;
 }
 
-
 /* Formatação do cabeçalho do artigo*/
-
 header#cabecalho-artigo h1 {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 20pt;
@@ -68,25 +62,19 @@ header#cabecalho-artigo h1 {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
   margin-top: 50px;
   padding-bottom: 0px;
-
 }
 
 header#cabecalho-artigo h3 {
   font-size: 12pt;
   color: #606060;
-
 }
-
-
 
 /*Formatação de imagens com legendas*/
 figure.foto-legenda {
   position: relative;
   border: 4px solid white;
-  box-shadow: 1px 1px 10px black;
   width: 300px;
   height: 300px;
-
 }
 
 figure.foto-legenda img {
@@ -109,7 +97,6 @@ figure.foto-legenda figcaption {
 
 figure.foto-legenda:hover figcaption {
   opacity: 1;
-
 }
 
 /* Formatação do Menu*/
@@ -117,14 +104,12 @@ nav#menu {
   display: flex;
   text-transform: uppercase;
   position: relative;
-  top: 0;       /* ou remova esse top */
-  left: 0;      /* remove o left: 540px */
   margin: 0;
   margin-top: 10px;
   padding: 0;
   text-align: center;
+  
 }
-
 
 nav#menu ul {
   display: flex; 
@@ -143,7 +128,6 @@ nav#menu li {
   font-weight: bold;
   font-size: 16pt;
   color: aliceblue;
-
 }
 
 nav#menu h1 {
@@ -153,7 +137,6 @@ nav#menu h1 {
 nav#menu a {
   color: aliceblue;
   text-decoration: none;
-
 }
 
 nav#menu a:hover {
@@ -167,13 +150,8 @@ nav#menu a:hover {
   border: none;
   font-size: 30px;
   color: #E4B124;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  z-index: 1000;
   cursor: pointer;
 }
-
 
 section#corpo {
   display: block;
@@ -183,17 +161,14 @@ section#corpo {
 }
 
 article#noticia-principal h2 {
-
   font-size: 13pt;
-  color: #0f0f0f;
-  background-color: #E4B124;
+  color: #ffffff;
+  background-color:  #222020;
   padding: 5px 0px 5px 10px;
   margin: 10px 0px 10px 0px;
-
 }
 
 /*formatação da tabela*/
-
 table#tabelaespec {
   border: 1px solid #030303;
   border-spacing: 0px;
@@ -212,20 +187,16 @@ table#tabelaespec td {
 table#tabelaespec td.ce {
   color: #ffffff;
   background-color: #0e0e0e;
-
 }
 
 table#tabelaespec td.cd {
   background-color: #cecece;
-
-
 }
 
 table#tabelaespec caption {
   color: #0f0f0f;
   font-size: 20p;
   font-weight: bolder;
-
 }
 
 table#tabelaespec caption span {
@@ -236,7 +207,6 @@ table#tabelaespec caption span {
   margin-top: 10px;
 }
 
-
 aside#lateral {
   display: block;
   width: 440px;
@@ -245,7 +215,6 @@ aside#lateral {
   background-color: #E4B124;
   padding: 25px;
   margin-top: 10px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 aside#lateral h1 {
@@ -254,16 +223,13 @@ aside#lateral h1 {
   color: #0c0b0b;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
   margin-top: -8px;
-
-
 }
 
 aside#lateral h2 {
-  background-color: #2f3332;
+  background-color:  #222020;
   font-size: 13pt;
   color: #ffffff;
   padding: 5px;
-
 }
 
 video#filme {
@@ -281,17 +247,15 @@ footer#rodape p {
   text-align: center;
 }
 
-
 div#interface {
   max-width: 1100px;
   width: 100%;
   margin: -20px auto 10px auto;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   padding: 10px 10px 10px 10px;
+  background-color: transparent;
 }
 
 @keyframes animate {
-
   0% {
     background-position: 0% 50%;
   }
@@ -303,61 +267,111 @@ div#interface {
   100% {
     background-position: 0% 50%;
   }
-
 }
 
-/*tornando responsivo*/
-
+/* Responsividade para dispositivos móveis */
 @media screen and (max-width: 768px) {
   body {
     font-size: 14px;
   }
 
   div#interface {
-    max-width: 90%;
-  }
-
-  div#interface {
-    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     padding: 10px;
   }
 
   header#cabecalho {
-    width: 100%;
+    flex-direction: row; /* Mantém o layout em linha */
     height: auto;
+    padding: 10px 20px;
     text-align: center;
+    position: relative; /* Para posicionar o botão menu */
   }
 
-  #menu-itens.hidden {
-    display: none;
+  header#cabecalho img#icone {
+    width: 120px;
+    margin-bottom: 0;
   }
 
-  #menu-overlay.hidden {
-    display: none;
+  /* CORREÇÃO DO BOTÃO MENU - Agora no canto superior direito */
+  #btn-menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
   }
 
+  /* CORREÇÃO DO MENU LATERAL */
   nav#menu ul {
-    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #000;
     flex-direction: column;
-    align-items: center;
-    padding: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-left: 20px;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+    z-index: 999;
+    gap: 0;
+    margin: 0;
+  }
+
+  nav#menu ul.show {
+    transform: translateX(0);
   }
 
   nav#menu li {
+    display: block;
+    margin: 15px 0;
     line-height: normal;
-    margin: 10px 0;
+    font-size: 14pt;
   }
 
-  aside#lateral,
-  section#corpo {
+  /* CORREÇÃO DO OVERLAY - agora só aparece quando o menu está aberto */
+  #menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: none; /* Inicialmente escondido */
+  }
+
+  #menu-overlay.show {
+    display: block; /* Mostra apenas quando menu está aberto */
+  }
+
+  section#corpo,
+  aside#lateral {
     width: 100%;
     float: none;
     padding: 10px;
+    box-sizing: border-box;
   }
 
-  img {
-    max-width: 100%;
+  aside#lateral {
+    margin-top: 20px;
+    padding: 15px;
+  }
+
+  figure.foto-legenda {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  figure.foto-legenda img {
+    width: 100%;
     height: auto;
   }
 
@@ -366,53 +380,37 @@ div#interface {
     height: auto;
   }
 
-  @media screen and (max-width: 768px) {
-    #btn-menu {
-      display: block;
-    }
-
-    nav#menu ul {
-      position: fixed;
-      top: 0;
-      right: 0;
-      height: 100vh;
-      width: 250px;
-      background-color: #000;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      padding-top: 60px;
-      padding-left: 20px;
-      transition: transform 0.3s ease;
-      transform: translateX(100%);
-      z-index: 999;
+  table#tabelaespec {
+    width: 100%;
+    font-size: 12px;
   }
 
-    nav#menu ul.show {
-    transform: translateX(0);
-    display: flex;
-  }
-
-   #menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 998;
-  }
-
-  nav#menu li {
-    display: block;
-    margin: 10px 0;
-    line-height: normal;
-  }
-
-  nav#menu {
-    position: relative;
-    top: 0;
-    left: 0;
+  table#tabelaespec td {
+    padding: 5px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  header#cabecalho-artigo h1 {
+    font-size: 16pt;
+    margin-top: 20px;
+  }
+
+  nav#menu ul {
+    width: 200px;
+  }
+
+  #btn-menu {
+    right: 15px;
+    top: 15px;
+  }
+
+  section#corpo,
+  aside#lateral {
+    padding: 5px;
+  }
+
+  p {
+    text-indent: 20px;
+  }
 }

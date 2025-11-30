@@ -142,7 +142,7 @@ ul#album-fotos li#foto06:hover {
     -webkit-transform: none;
   }
 
-  /* CORREÇÃO DO BOTÃO MENU */
+ 
   #btn-menu {
     display: block;
     position: absolute;
@@ -151,7 +151,6 @@ ul#album-fotos li#foto06:hover {
     z-index: 1000;
   }
 
-  /* CORREÇÃO DO MENU LATERAL */
   nav#menu ul {
     position: fixed;
     top: 0;
@@ -182,7 +181,7 @@ ul#album-fotos li#foto06:hover {
     font-size: 14pt;
   }
 
-  /* CORREÇÃO DO OVERLAY */
+
   #menu-overlay {
     position: fixed;
     top: 0;

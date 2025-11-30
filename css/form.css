@@ -21,6 +21,7 @@ section#corpo-full{
 label{
    color: #ffffff; 
 }
+
 .form-contato input,
 .form-contato textarea {
     width: 100%;
@@ -43,4 +44,106 @@ label{
 
 .form-contato button:hover {
     background-color: #c9a700;
+}
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 768px) {
+  section#corpo-full {
+    padding: 10px;
+  }
+
+  .form-contato {
+    padding: 15px;
+    margin-top: 15px;
+  }
+
+  .contatos {
+    font-size: 11pt;
+  }
+
+  .form-contato input,
+  .form-contato textarea {
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+
+  .form-contato button {
+    padding: 8px 16px;
+    width: 100%;
+  }
+
+  
+  #btn-menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+  }
+
+  /* CORREÇÃO DO MENU LATERAL */
+  nav#menu ul {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #000;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-left: 20px;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+    z-index: 999;
+    gap: 0;
+    margin: 0;
+  }
+
+  nav#menu ul.show {
+    transform: translateX(0);
+  }
+
+  nav#menu li {
+    display: block;
+    margin: 15px 0;
+    line-height: normal;
+    font-size: 14pt;
+  }
+
+ 
+  #menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: none;
+  }
+
+  #menu-overlay.show {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form-contato {
+    padding: 10px;
+  }
+
+  .contatos {
+    font-size: 10pt;
+  }
+
+  #btn-menu {
+    right: 15px;
+    top: 0px;
+  }
+
+  nav#menu ul {
+    width: 200px;
+  }
 }

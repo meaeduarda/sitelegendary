@@ -6,14 +6,27 @@ header#cabecalho-artigo h1.titlegaleria {
     text-align: center;
 }
 
+ul#album-fotos li {
+    position: relative; 
+}
+
 ul#album-fotos li span {
-    opacity:0;
+    opacity: 0;
     color: white;
     text-shadow: 1px 1px 1px black;
     background-color: rgba(0,0,0,.3);
     font-size: 9pt;
-    line-height: 370px;
-    padding: 5px;
+
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 6px 0;
+    text-align: center;
+
+    line-height: normal;  
+    transition: opacity 0.3s ease;
 }
 
 /* mouse passar por cima-*/
@@ -39,10 +52,12 @@ ul#album-fotos li {
     width: 200px;
     height: 200px;
     margin: 10px;
-    border: 5px solid rgb(243, 240, 240);
-    background-color: white;
-    box-shadow: 1px 1px 3px rgba(0,0,0,.4);
+    border: 5px solid rgb(32, 32, 32);
+    background-color: rgb(0, 0, 0);
     -webkit-transition: all .4s ease-in;
+    position: relative;
+    z-index: 1;
+    
 }
 
 /*Carregando as fotos para a galeria*/
@@ -83,32 +98,125 @@ ul#album-fotos li#foto06 {
 }
 
 /*Efeito hover para cada foto*/
-ul#album-fotos li#foto01:hover{
-    background-position: 0px 0px;
-    background-size: 200px 200px;
+ul#album-fotos li:hover {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    
 }
 
-ul#album-fotos li#foto02:hover{
-    background-position: 0px 0px;
-    background-size: 200px 200px;
+ul#album-fotos li#foto01:hover,
+ul#album-fotos li#foto02:hover,
+ul#album-fotos li#foto03:hover,
+ul#album-fotos li#foto04:hover,
+ul#album-fotos li#foto05:hover,
+ul#album-fotos li#foto06:hover {
+    background-position: center;
+    background-size: cover;
 }
 
-ul#album-fotos li#foto03:hover{
-    background-position: 0px 0px;
-    background-size: 200px 200px;
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 768px) {
+  header#cabecalho-artigo h1.titlegaleria {
+    font-size: 20pt;
+  }
+
+  ul#album-fotos {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  ul#album-fotos li {
+    width: calc(50% - 20px);
+    height: 150px;
+    margin: 5px;
+  }
+
+  ul#album-fotos li span {
+    font-size: 8pt;
+  }
+
+  /* Ajustar o efeito hover para mobile */
+  ul#album-fotos li:hover {
+    -webkit-transform: none;
+  }
+
+  /* CORREÇÃO DO BOTÃO MENU */
+  #btn-menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+  }
+
+  /* CORREÇÃO DO MENU LATERAL */
+  nav#menu ul {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #000;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-left: 20px;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+    z-index: 999;
+    gap: 0;
+    margin: 0;
+  }
+
+  nav#menu ul.show {
+    transform: translateX(0);
+  }
+
+  nav#menu li {
+    display: block;
+    margin: 15px 0;
+    line-height: normal;
+    font-size: 14pt;
+  }
+
+  /* CORREÇÃO DO OVERLAY */
+  #menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: none;
+  }
+
+  #menu-overlay.show {
+    display: block;
+  }
 }
 
-ul#album-fotos li#foto04:hover{
-    background-position: 0px 0px;
-    background-size: 200px 200px;
-}
+@media screen and (max-width: 480px) {
+  ul#album-fotos li {
+    width: calc(100% - 20px);
+    height: 200px;
+    margin: 10px auto;
+    float: none;
+  }
 
-ul#album-fotos li#foto05:hover{
-    background-position: 0px 0px;
-    background-size: 200px 200px;
-}
+  header#cabecalho-artigo h1.titlegaleria {
+    font-size: 18pt;
+  }
 
-ul#album-fotos li#foto06:hover{
-    background-position: 0px 0px;
-    background-size: 200px 200px;
+  #btn-menu {
+    right: 15px;
+    top: 0px;
+  }
+
+  nav#menu ul {
+    width: 200px;
+  }
 }
